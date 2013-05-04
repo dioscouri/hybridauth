@@ -129,7 +129,11 @@ class HybridAuthTableAccounts extends HybridAuthTable
 		$details['password2']   = $details['password'];
 
 		// create the new user
-		$user = $userHelper->createNewUser($details);
+		if (!$user = $userHelper->createNewUser($details)) 
+		{
+		    return false;
+		}
+		
         if ($guest_email)
         {
             $user->setParam( 'hybridauth_incomplete_required_fields', array( 'email' ) );
@@ -154,7 +158,7 @@ class HybridAuthTableAccounts extends HybridAuthTable
 		$username = $file->cleanTitle( $username );
 		
 		$string = $username;
-		for ($i=1; ($userHelper->usernameExists( $string ) === true); $i++)
+		for ($i=1; ($userHelper->usernameExists( $string )); $i++)
 		{
 		    $string = $username . $i;
 		}
