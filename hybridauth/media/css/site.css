@@ -1,0 +1,86 @@
+/*-------------------------------------------
+    Common
+-------------------------------------------*/
+.hybridauth span.href {
+	cursor: pointer;
+	color: blue;
+	text-decoration: none;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+.hybridauth span.href:hover {
+	cursor:pointer;
+	color: blue;
+	font-weight: bold;
+	text-decoration: underline;	
+}
+
+.hybridauth .note {
+	background-color: #FFFFDD;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #DDDDBB;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+.hybridauth .note_pink {
+	background-color: #FDE8FD;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #FFCCCC;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+.hybridauth .note_green {
+	background-color: #EBF6DF;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #289728;
+	border-spacing: 0px;
+	border-collapse: collapse;	
+}
+
+/*-------------------------------------------    
+    Self-clearing Floats
+-------------------------------------------*/
+.hybridauth .clear:after,
+.hybridauth .wrap:after,
+.hybridauth .flat:after {
+    clear: both;
+    content: '.';
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    display: block;
+}
+
+.hybridauth .wrap,
+.hybridauth .flat {
+    zoom: 1;
+}
+
+/*-------------------------------------------
+    Login and Registration
+-------------------------------------------*/
+.hybridauth .flat li {
+    float: left;
+}
+
+.hybridauth ol, 
+.hybridauth ul {
+    list-style: none;
+}
+
+.hybridauth #sso_providers li {
+    margin-right: 15px;
+}
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<menu>
+   <link>
+       <name>Configuration</name>
+       <url>index.php?option=com_hybridauth&#38;view=config</url>
+   </link>
+</menu>

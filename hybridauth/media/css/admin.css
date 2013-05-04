@@ -1,0 +1,134 @@
+/** toolbar icons **/
+.icon-48-hybridauth { 
+	background-image: url(../../../media/com_hybridauth/images/hybridauth.png); 
+	padding-left: 255px !important;
+}
+.icon-32-savenew { 
+	background-image: url(../../../media/com_hybridauth/images/icon-32-savenew.png); 
+}
+.icon-32-saveprev { 
+    background-image: url(../../../media/com_hybridauth/images/icon-32-saveprev.png); 
+}
+.icon-32-savenext { 
+    background-image: url(../../../media/com_hybridauth/images/icon-32-savenext.png); 
+}
+.icon-32-prev { 
+    background-image: url(../../../media/com_hybridauth/images/icon-32-prev.png); 
+}
+.icon-32-next { 
+    background-image: url(../../../media/com_hybridauth/images/icon-32-next.png); 
+}
+.icon-32-revert { 
+	background-image: url(../../../administrator/templates/khepri/images/toolbar/icon-32-revert.png); 
+}
+.icon-32-refresh { 
+	background-image: url(../../../administrator/templates/khepri/images/toolbar/icon-32-refresh.png); 
+}
+
+/** filter lines **/
+tr.filterline div.range {
+	width: 100%;
+	text-align: left;
+}
+
+tr.filterline div.range div.rangeline {
+	width: 100%;
+	white-space: nowrap;
+	padding-bottom: 2px;
+	text-align: right;
+}
+
+tr.filterline div.range div.rangeline span.label {
+	text-align: left;
+}
+
+tr.filterline div.range div.rangeline .input {
+	text-align: left;
+}
+
+/** common **/
+span.href {
+	cursor: pointer;
+	color: #0000FF;
+	text-decoration: none;
+	/* font-weight: bold; */
+}
+span.href:hover {
+	cursor: pointer;
+	color: #0000FF;
+	/* font-weight: bold; */
+	text-decoration: underline;	
+}
+td img { vertical-align: middle; }
+
+/** notes **/
+.note, .note_pink, .note_green
+{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #DDDDBB;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+.note       { background-color: #FFFFDD; }
+.note_pink  { background-color: #FDE8FD; }
+.note_green { background-color: #EBF6DF; }
+
+form fieldset label {
+    clear: none;
+    margin: 5px 10px 5px 0px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.full {
+    width: 100%;
+}
+
+.flat li {
+    float: left;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.table {
+    display: table;
+}
+
+.table .row {
+    display: table-row;
+}
+
+.table .row .cell {
+    display: table-cell;
+}
+
+.indent-10 {
+    margin-left: 10px;
+}
+
+.indent-20 {
+    margin-left: 20px;
+}

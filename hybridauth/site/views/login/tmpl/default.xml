@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_HYBRIDAUTH_LOGIN_DEFAULT_LAYOUT">
+        <message>
+            <![CDATA[COM_HYBRIDAUTH_LOGIN_DEFAULT_LAYOUT_DESC]]>
+        </message>
+    </layout>
+    
+    <!-- Joomla 1.5 only -->
+    <state>
+        <name>COM_HYBRIDAUTH_LOGIN_DEFAULT_LAYOUT</name>
+        <description>COM_HYBRIDAUTH_LOGIN_DEFAULT_LAYOUT_DESC</description>
+    </state>
+</metadata>

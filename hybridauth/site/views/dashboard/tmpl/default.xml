@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="HYBRIDAUTH DASHBOARD DEFAULT LAYOUT">
+		<message>
+			<![CDATA[HYBRIDAUTH DASHBOARD DEFAULT LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>HYBRIDAUTH DASHBOARD DEFAULT LAYOUT</name>
+		<description>HYBRIDAUTH DASHBOARD DEFAULT LAYOUT DESC</description>
+        <!--
+        <url addpath="/administrator/components/com_hybridauth/elements">
+            <param name="filter_group" type="hybridauthgroup" section="com_hybridauth" default="" label="Select Group" description="A Tag Group" />
+            <param name="task" type="hidden" section="com_hybridauth" default="view" />
+        </url>
+        -->
+	</state>
+</metadata>
