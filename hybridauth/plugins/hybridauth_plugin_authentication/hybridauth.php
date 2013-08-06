@@ -54,6 +54,13 @@ class plgAuthenticationHybridAuth extends JPlugin
      */
     private function authenticate( $credentials, $options, &$response )
     {
+        $app = JFactory::getApplication();
+        if ($app->isAdmin()) {
+            $response->status		= JAuthentication::STATUS_FAILURE;
+            $response->error_message	= JText::sprintf('JGLOBAL_AUTH_FAILED', $message);
+            return false;
+        }
+        
         $cookie_type = JRequest::getVar( 'hybridauth_type', '', 'cookie' );
         $cookie_params = json_decode( JRequest::getVar( 'hybridauth_params', '', 'cookie' ) );
         $session = JFactory::getSession();
