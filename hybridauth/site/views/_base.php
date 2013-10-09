@@ -13,6 +13,19 @@ defined('_JEXEC') or die('Restricted access');
 
 class HybridAuthViewBase extends DSCViewSite
 {
+    function __construct( $config=array() )
+    {
+        parent::__construct( $config );
+    
+        $this->defines = HybridAuth::getInstance();
+    
+        HybridAuth::load( "HybridAuthHelperRoute", 'helpers.route' );
+        $this->router = new HybridAuthHelperRoute();
+    
+        $this->user = JFactory::getUser();
+        $this->session = JFactory::getSession();
+    }
+        
     function display($tpl=null)
     {
         // make this conditional on a config value

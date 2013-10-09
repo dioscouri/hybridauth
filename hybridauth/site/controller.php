@@ -16,11 +16,23 @@ class HybridAuthController extends DSCControllerSite
     /**
     * default view
     */
-    public $default_view = 'dashboard';
+    public $default_view = 'login';
     
 	var $_models = array();
 	var $message = "";
 	var $messagetype = "";
+	
+	function __construct( $config=array() )
+	{
+	    parent::__construct( $config );
+	
+	    $this->defines = HybridAuth::getInstance();
+	
+	    HybridAuth::load( "HybridAuthHelperRoute", 'helpers.route' );
+	    $this->router = new HybridAuthHelperRoute();
+	
+	    $this->user = JFactory::getUser();
+	}
 }
 
 ?>
