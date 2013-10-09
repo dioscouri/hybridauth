@@ -61,3 +61,30 @@ $lang->load('com_hybridauth');
     </li>
     <?php } ?>
 </ul>
+
+</div>
+
+<div class="dsc-wrap top-20">
+    <form id="hybridauth-emailregistration-form" name="hybridauth-emailregistration-form" action="<?php echo JRoute::_( "index.php?option=com_hybridauth&view=register&task=save" ); ?>" method="post">
+            
+        <h3>
+            <?php echo JText::_('COM_HYBRIDAUTH_REGISTER_WITH_EMAIL'); ?>
+        </h3>
+        
+        <div id="email-password" class="control-group">
+            <label><?php echo JText::_( "COM_HYBRIDAUTH_EMAIL_ADDRESS" ); ?></label>
+            <input type="text" name="email_address" class="required" />
+        </div>
+        
+        <fieldset id="register-password" class="control-group">
+            <label><?php echo JText::_( "COM_HYBRIDAUTH_PASSWORD" ); ?></label>
+            <input type="password" name="register-new-password" autocomplete="off" />
+            
+            <label><?php echo JText::_( "COM_HYBRIDAUTH_PASSWORD_CONFIRM" ); ?></label>
+            <input type="password" name="register-new-password2" autocomplete="off" />
+        </fieldset>
+        
+        <input type="submit" id="hybridauth-emailregistration-button" class="btn btn-primary" value="<?php echo JText::_('COM_HYBRIDAUTH_REGISTER') ?>" />
+    
+    </form>
+</div>

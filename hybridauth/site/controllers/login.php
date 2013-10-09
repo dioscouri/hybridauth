@@ -22,15 +22,7 @@ class HybridAuthControllerLogin extends HybridAuthController
 	{
 	    $user = JFactory::getUser();
 	    if (!empty($user->id)) {
-	        if(version_compare(JVERSION,'1.6.0','ge')) {
-	            // Joomla! 1.6+ code here
-	            $redirect = "index.php?option=com_users&view=login";
-	        } else {
-	            // Joomla! 1.5 code here
-	            $redirect = "index.php?option=com_user&view=login";
-	        }
-	        
-	        $this->setRedirect( $redirect, null, null );
+	        $this->loginComplete();
 	        return;
 	    }
 	    
@@ -46,7 +38,14 @@ class HybridAuthControllerLogin extends HybridAuthController
 	}
 	
 	function login()
-	{	    
+	{
+	    // is their a return value in the URL?  if so, set the session return value
+	    $return = JRequest::getVar( 'return', '', 'request', 'base64' );
+	    if (!empty($return))
+	    {
+	        setcookie("hybridauth_login_return", $return, time()+3600, '/');
+	    }
+	    
 		JModel::addIncludePath( JPATH_ADMINISTRATOR . '/components/com_hybridauth/models' );
 		$model = JModel::getInstance( 'Config', 'HybridAuthModel' );
 		$this->config = $model->getHAConfigArray();
@@ -277,13 +276,8 @@ class HybridAuthControllerLogin extends HybridAuthController
 		} else {
 			$data['remember'] = (int)$options['remember'];
 			$app->setUserState('users.login.form.data', $data);
-			if(version_compare(JVERSION,'1.6.0','ge')) {
-			    // Joomla! 1.6+ code here
-			    $app->redirect(JRoute::_('index.php?option=com_users&view=login', false));
-			} else {
-			    // Joomla! 1.5 code here
-			    $app->redirect(JRoute::_('index.php?option=com_user&view=login', false));
-			}			
+			
+			$this->loginComplete();			
 		}
 	}
 
